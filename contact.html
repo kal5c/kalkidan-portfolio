@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Contact Kalkidan Melaku, a Full-Stack Web Developer specializing in React, JavaScript, Node.js, Express.js and MySQL."
+  >
+
+  <title>Contact | Kalkidan Melaku</title>
+
+  <!-- Bootstrap -->
+  <link
+    rel="stylesheet"
+    href="bootstrap-5.3.7-dist/css/bootstrap.min.css"
+  >
+
+  <!-- Boxicons -->
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="contact.css"> 
+
+  <style>
+    /* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+  min-height: 75px;
+  padding: 0 8%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #0a0f1c;
+}
+
+.logo {
+  color: #f8fafc;
+  text-decoration: none;
+
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  color: #f8fafc;
+
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  transition: 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li.active a {
+  color: #38bdf8;
+}
+
+
+/* =========================================
+   CONTACT HERO
+========================================= */
+
+.contact-hero {
+  padding: 90px 20px 80px;
+
+  text-align: center;
+
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #111827
+  );
+}
+
+.contact-hero-content {
+  max-width: 750px;
+  margin: auto;
+}
+
+.small-title {
+  color: #38bdf8;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 12px;
+}
+
+.contact-hero h1 {
+  font-size: 3.3rem;
+
+  margin-bottom: 20px;
+
+  color: #f8fafc;
+}
+
+.contact-hero p:last-child {
+  color: #cbd5e1;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact-section {
+  padding: 90px 20px;
+
+  background-color: #0f172a;
+}
+
+.contact-container {
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: start;
+}
+
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.contact-info h2 {
+  font-size: 2.3rem;
+
+  margin-bottom: 15px;
+
+  color: #f8fafc;
+}
+
+.contact-description {
+  color: #94a3b8;
+
+  line-height: 1.8;
+
+  margin-bottom: 35px;
+}
+
+
+/* =========================================
+   CONTACT ITEMS
+========================================= */
+
+.contact-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 25px;
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background-color: #172033;
+
+  border: 1px solid #26354a;
+}
+
+.contact-icon i {
+  color: #38bdf8;
+
+  font-size: 23px;
+}
+
+.contact-item h3 {
+  color: #f8fafc;
+
+  font-size: 16px;
+
+  margin-bottom: 3px;
+}
+
+.contact-item p,
+.contact-item a {
+  color: #94a3b8;
+
+  text-decoration: none;
+
+  margin: 0;
+
+  font-size: 14px;
+}
+
+.contact-item a:hover {
+  color: #38bdf8;
+}
+
+
+/* =========================================
+   SOCIAL MEDIA
+========================================= */
+
+.contact-social {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.contact-social a {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid #334155;
+
+  border-radius: 50%;
+
+  color: #cbd5e1;
+
+  text-decoration: none;
+
+  font-size: 21px;
+
+  transition: 0.3s ease;
+}
+
+.contact-social a:hover {
+  color: #38bdf8;
+
+  border-color: #38bdf8;
+
+  transform: translateY(-3px);
+}
+
+.social-note {
+  color: #64748b;
+
+  font-size: 12px;
+
+  margin-top: 10px;
+}
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+.contact-form-container {
+  padding: 35px;
+
+  background: linear-gradient(
+    145deg,
+    #172033,
+    #111827
+  );
+
+  border: 1px solid #1e293b;
+
+  border-radius: 18px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.contact-form-container h2 {
+  color: #f8fafc;
+
+  font-size: 1.7rem;
+
+  margin-bottom: 8px;
+}
+
+.contact-form-container > p {
+  color: #94a3b8;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #cbd5e1;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  border: 1px solid #334155;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background-color: #0f172a;
+
+  color: #f8fafc;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  transition: 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #64748b;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #38bdf8;
+
+  box-shadow:
+    0 0 0 3px rgba(56, 189, 248, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+
+  min-height: 140px;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.submit-btn {
+  width: 100%;
+
+  padding: 13px 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background-color: #38bdf8;
+
+  color: #0f172a;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.submit-btn i {
+  margin-left: 7px;
+
+  font-size: 18px;
+
+  vertical-align: middle;
+}
+
+.submit-btn:hover {
+  background-color: #7dd3fc;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  padding: 55px 20px 25px;
+
+  background-color: #080c14;
+
+  text-align: center;
+}
+
+.footer-content h3 {
+  color: #f8fafc;
+
+  font-size: 1.5rem;
+
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  color: #94a3b8;
+
+  margin-bottom: 5px;
+}
+
+.footer-stack {
+  color: #38bdf8 !important;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   FOOTER LINKS
+========================================= */
+
+.footer-links {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 25px;
+
+  margin: 30px 0;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #38bdf8;
+}
+
+
+/* =========================================
+   FOOTER SOCIAL
+========================================= */
+
+.footer-social {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.footer-social a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid #334155;
+
+  border-radius: 50%;
+
+  color: #cbd5e1;
+
+  text-decoration: none;
+
+  font-size: 20px;
+
+  transition: 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #38bdf8;
+
+  border-color: #38bdf8;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
+.copyright {
+  padding-top: 20px;
+
+  border-top: 1px solid #1e293b;
+}
+
+.copyright p {
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 20px 5%;
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .navbar ul {
+    gap: 20px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+
+    max-width: 700px;
+
+    gap: 50px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .contact-hero {
+    padding: 65px 20px;
+  }
+
+  .contact-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .contact-hero p:last-child {
+    font-size: 15px;
+  }
+
+  .contact-section {
+    padding: 65px 20px;
+  }
+
+  .contact-info h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form-container {
+    padding: 25px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+}
+  </style>
+  
+
+  <!-- Shared JS-support styles -->
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav class="navbar">
+
+    <a href="portfolio.html" class="logo">
+      Kalkidan
+    </a>
+
+    <ul>
+      <li>
+        <a href="portfolio.html">Home</a>
+      </li>
+
+      <li>
+        <a href="about.html">About</a>
+      </li>
+
+      <li>
+        <a href="my_Skills.html">My Skills</a>
+      </li>
+
+      <li>
+        <a href="My_Projects.html">My Projects</a>
+      </li>
+
+      <li class="active">
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+
+  </nav>
+
+
+  <!-- ================= CONTACT HERO ================= -->
+
+  <section class="contact-hero">
+
+    <div class="contact-hero-content">
+
+      <p class="small-title">
+        GET IN TOUCH
+      </p>
+
+      <h1>
+        Let's Work Together
+      </h1>
+
+      <p>
+        Have a project idea, freelance opportunity, or collaboration
+        in mind? I'd be happy to hear from you.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CONTACT SECTION ================= -->
+
+  <section class="contact-section">
+
+    <div class="contact-container">
+
+      <!-- ===== CONTACT INFORMATION ===== -->
+
+      <div class="contact-info">
+
+        <p class="small-title">
+          CONTACT INFORMATION
+        </p>
+
+        <h2>
+          Let's Connect
+        </h2>
+
+        <p class="contact-description">
+          I'm open to discussing web development projects, freelance
+          opportunities, collaborations, and interesting technology
+          ideas.
+        </p>
+
+
+        <!-- Email -->
+
+        <div class="contact-item">
+
+          <div class="contact-icon">
+            <i class="bx bx-envelope"></i>
+          </div>
+
+          <div>
+            <h3>Email</h3>
+
+            <a href="mailto:kalkidan014@gmail.com">
+              kalkidanm014@gmail.com
+            </a>
+          </div>
+
+        </div>
+
+
+        <!-- Location -->
+
+        <div class="contact-item">
+
+          <div class="contact-icon">
+            <i class="bx bx-map"></i>
+          </div>
+
+          <div>
+            <h3>Location</h3>
+
+            <p>
+              Addis Ababa, Ethiopia
+            </p>
+          </div>
+
+        </div>
+
+
+        <!-- Professional Focus -->
+
+        <div class="contact-item">
+
+          <div class="contact-icon">
+            <i class="bx bx-code-alt"></i>
+          </div>
+
+          <div>
+            <h3>Specialization</h3>
+
+            <p>
+              Full-Stack Web Development
+            </p>
+          </div>
+
+        </div>
+
+
+        <!-- Availability -->
+
+        <div class="contact-item">
+
+          <div class="contact-icon">
+            <i class="bx bx-briefcase"></i>
+          </div>
+
+          <div>
+            <h3>Open To</h3>
+
+            <p>
+              Freelance & Development Opportunities
+            </p>
+          </div>
+
+        </div>
+
+
+        <!-- Social Links -->
+
+        <div class="contact-social"> 
+          
+ 
+    <div class="footer-social">
+
+      <a href="https://www.linkedin.com/in/kalkidan-melaku-7830aa2b9/" target="_blank" rel="noopener noreferrer">
+    <i class='bx bxl-linkedin'></i>
+</a>
+
+<a href="https://github.com/kal5c" target="_blank" rel="noopener noreferrer">
+    <i class='bx bxl-github'></i>
+</a>
+
+<a href="mailto:kalkidanm014@gmail.com">
+    <i class='bx bx-envelope'></i>
+</a>
+
+<a href="https://t.me/kal5c" target="_blank" rel="noopener noreferrer">
+    <i class='bx bxl-telegram'></i>
+</a>
+       
+
+    </div>
+        </div>
+
+        <p class="social-note">
+         
+        </p>
+
+      </div>
+
+
+      <!-- ===== CONTACT FORM ===== -->
+
+      <div class="contact-form-container">
+
+        <h2>
+          Send Me a Message
+        </h2>
+
+        <p>
+          Fill out the form below and I'll get back to you as soon
+          as possible.
+        </p>
+
+
+        <form action="#" method="POST">
+
+          <!-- Name -->
+
+          <div class="form-group">
+
+            <label for="name">
+              Your Name
+            </label>
+
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            >
+
+          </div>
+
+
+          <!-- Email -->
+
+          <div class="form-group">
+
+            <label for="email">
+              Email Address
+            </label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            >
+
+          </div>
+
+
+          <!-- Subject -->
+
+          <div class="form-group">
+
+            <label for="subject">
+              Subject
+            </label>
+
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="What would you like to discuss?"
+              required
+            >
+
+          </div>
+
+
+          <!-- Message -->
+
+          <div class="form-group">
+
+            <label for="message">
+              Message
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Write your message here..."
+              required
+            ></textarea>
+
+          </div>
+
+
+          <!-- Submit -->
+
+          <button
+            type="submit"
+            class="submit-btn"
+          >
+            Send Message
+            <i class="bx bx-send"></i>
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="footer-content">
+
+      <h3>
+        Kalkidan Portfolio
+      </h3>
+
+      <p>
+        Full-Stack Web Developer
+      </p>
+
+      <p class="footer-stack">
+        React • JavaScript • Node.js • Express.js • MySQL
+      </p>
+
+    </div>
+
+
+    <!-- Footer Navigation -->
+
+    <div class="footer-links">
+
+      <a href="portfolio.html">
+        Home
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="my_Skills.html">
+        My Skills
+      </a>
+
+      <a href="My_Projects.html">
+        My Projects
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+    </div>
+
+
+    <!-- Footer Social Links -->
+
+
+<!--
+    <div class="footer-social">
+
+      <a href="https://www.linkedin.com/in/kalkidan-melaku-7830aa2b9/" target="_blank" rel="noopener noreferrer">
+    <i class='bx bxl-linkedin'></i>
+</a>
+
+<a href="https://github.com/kal5c" target="_blank" rel="noopener noreferrer">
+    <i class='bx bxl-github'></i>
+</a>
+
+<a href="mailto:kalkidanm014@gmail.com">
+    <i class='bx bx-envelope'></i>
+</a>
+
+<a href="https://t.me/kal5c" target="_blank" rel="noopener noreferrer">
+    <i class='bx bxl-telegram'></i>
+</a>
+       
+
+    </div>-->
+
+
+
+    <!-- Copyright -->
+
+    <div class="copyright">
+
+      <p>
+        © 2026 Kalkidan Melaku. All Rights Reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- Shared site interactivity -->
+  <script src="main.js"></script>
+</body>
+</html>

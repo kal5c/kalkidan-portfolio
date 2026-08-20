@@ -1,0 +1,594 @@
+ /* =========================================
+GLOBAL
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background-color: #0f172a;
+color: #f1f5f9;
+font-family: Arial, Helvetica, sans-serif;
+line-height: 1.6;
+}
+
+/* =========================================
+NAVIGATION
+========================================= */
+
+.navbar {
+min-height: 75px;
+padding: 0 8%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #0a0f1c;
+}
+
+.logo {
+color: #f8fafc;
+text-decoration: none;
+font-size: 28px;
+font-weight: 700;
+letter-spacing: 1px;
+}
+
+.navbar ul {
+display: flex;
+align-items: center;
+gap: 30px;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.navbar ul li a {
+color: #f8fafc;
+text-decoration: none;
+font-size: 16px;
+font-weight: 500;
+transition: 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li.active a {
+color: #38bdf8;
+}
+
+/* =========================================
+PAGE HEADER
+========================================= */
+
+.skills-header {
+padding: 90px 20px 80px;
+text-align: center;
+background: linear-gradient(
+135deg,
+#0f172a,
+#111827
+);
+}
+
+.header-content {
+max-width: 800px;
+margin: auto;
+}
+
+.small-title {
+color: #38bdf8;
+font-size: 14px;
+font-weight: 700;
+letter-spacing: 3px;
+margin-bottom: 12px;
+}
+
+.skills-header h1 {
+font-size: 3.5rem;
+margin-bottom: 20px;
+font-weight: 700;
+}
+
+.header-description {
+max-width: 700px;
+margin: auto;
+color: #cbd5e1;
+font-size: 17px;
+line-height: 1.8;
+}
+
+/* =========================================
+SECTION TITLES
+========================================= */
+
+.section-title {
+text-align: center;
+margin-bottom: 50px;
+}
+
+.section-title > p:first-child {
+color: #38bdf8;
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 3px;
+margin-bottom: 10px;
+}
+
+.section-title h2 {
+font-size: 2.5rem;
+color: #f8fafc;
+margin-bottom: 15px;
+}
+
+.section-description {
+max-width: 650px;
+margin: auto;
+color: #94a3b8;
+}
+
+/* =========================================
+MAIN SKILLS
+========================================= */
+
+.services-page {
+padding: 90px 20px;
+background-color: #0f172a;
+}
+
+.services-container {
+max-width: 1150px;
+margin: 0 auto;
+
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+
+gap: 30px;
+}
+
+/* =========================================
+SKILL CARDS
+========================================= */
+
+.service-box {
+padding: 35px;
+border: 1px solid #1e293b;
+border-radius: 18px;
+
+background: linear-gradient(
+145deg,
+#172033,
+#111827
+);
+
+text-align: left;
+
+transition:
+transform 0.3s ease,
+box-shadow 0.3s ease,
+border-color 0.3s ease;
+}
+
+.service-box:hover {
+transform: translateY(-8px);
+
+border-color: #38bdf8;
+
+box-shadow:
+0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================
+SERVICE ICON
+========================================= */
+
+.service-icon {
+width: 60px;
+height: 60px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+border-radius: 14px;
+
+background-color: #1e293b;
+
+font-size: 28px;
+
+margin-bottom: 20px;
+}
+
+/* =========================================
+SERVICE TEXT
+========================================= */
+
+.service-box h3 {
+color: #f8fafc;
+font-size: 1.4rem;
+margin-bottom: 15px;
+}
+
+.service-box p {
+color: #cbd5e1;
+font-size: 15px;
+line-height: 1.8;
+margin-bottom: 22px;
+}
+
+/* =========================================
+TECHNOLOGY TAGS
+========================================= */
+
+.technology-list {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+.technology-list span {
+padding: 6px 12px;
+
+background-color: #1e293b;
+
+border: 1px solid #334155;
+
+border-radius: 20px;
+
+color: #7dd3fc;
+
+font-size: 12px;
+}
+
+/* =========================================
+DEVELOPMENT TOOLS
+========================================= */
+
+.tools-section {
+padding: 90px 20px;
+
+background-color: #111827;
+}
+
+.tools-container {
+max-width: 1100px;
+margin: auto;
+
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+
+gap: 20px;
+}
+
+.tool-box {
+padding: 30px 20px;
+
+text-align: center;
+
+background-color: #0f172a;
+
+border: 1px solid #1e293b;
+
+border-radius: 15px;
+
+transition: 0.3s ease;
+}
+
+.tool-box:hover {
+transform: translateY(-5px);
+
+border-color: #38bdf8;
+}
+
+.tool-box i {
+font-size: 42px;
+
+color: #38bdf8;
+
+margin-bottom: 15px;
+}
+
+.tool-box h3 {
+color: #f8fafc;
+
+font-size: 1.2rem;
+
+margin-bottom: 8px;
+}
+
+.tool-box p {
+color: #94a3b8;
+
+font-size: 14px;
+}
+
+/* =========================================
+CURRENTLY IMPROVING
+========================================= */
+
+.learning-section {
+padding: 90px 20px;
+
+background:
+linear-gradient(
+135deg,
+#0f172a,
+#172033
+);
+
+text-align: center;
+}
+
+.learning-content {
+max-width: 750px;
+margin: auto;
+}
+
+.learning-content h2 {
+font-size: 2.5rem;
+
+margin-bottom: 20px;
+
+color: #f8fafc;
+}
+
+.learning-content > p:last-child {
+color: #cbd5e1;
+
+font-size: 17px;
+
+line-height: 1.8;
+}
+
+/* =========================================
+FOOTER
+========================================= */
+
+footer {
+padding: 55px 20px 25px;
+
+background-color: #080c14;
+
+text-align: center;
+}
+
+.footer-content h3 {
+color: #f8fafc;
+
+font-size: 1.5rem;
+
+margin-bottom: 10px;
+}
+
+.footer-content p {
+color: #94a3b8;
+
+margin-bottom: 5px;
+}
+
+.footer-stack {
+color: #38bdf8 !important;
+
+font-size: 14px;
+}
+
+/* =========================================
+FOOTER LINKS
+========================================= */
+
+.footer-links {
+display: flex;
+
+justify-content: center;
+
+flex-wrap: wrap;
+
+gap: 25px;
+
+margin: 30px 0;
+}
+
+.footer-links a {
+color: #cbd5e1;
+
+text-decoration: none;
+
+transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+color: #38bdf8;
+}
+
+/* =========================================
+SOCIAL LINKS
+========================================= */
+
+.footer-social {
+display: flex;
+
+justify-content: center;
+
+gap: 15px;
+
+margin-bottom: 25px;
+}
+
+.footer-social a {
+width: 42px;
+height: 42px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+border: 1px solid #334155;
+
+border-radius: 50%;
+
+color: #cbd5e1;
+
+text-decoration: none;
+
+font-size: 20px;
+
+transition: 0.3s ease;
+}
+
+.footer-social a:hover {
+color: #38bdf8;
+
+border-color: #38bdf8;
+
+transform: translateY(-3px);
+}
+
+/* =========================================
+CONTACT BUTTON
+========================================= */
+
+.btn-box {
+display: inline-block;
+
+padding: 11px 25px;
+
+margin-bottom: 30px;
+
+border-radius: 25px;
+
+background-color: #38bdf8;
+
+color: #0f172a;
+
+text-decoration: none;
+
+font-weight: 700;
+
+transition: 0.3s ease;
+}
+
+.btn-box:hover {
+background-color: #7dd3fc;
+
+transform: translateY(-2px);
+}
+
+/* =========================================
+COPYRIGHT
+========================================= */
+
+.copyright {
+padding-top: 20px;
+
+border-top: 1px solid #1e293b;
+}
+
+.copyright p {
+color: #64748b;
+
+font-size: 13px;
+}
+
+/* =========================================
+TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+.navbar {
+padding: 20px 5%;
+
+```
+flex-direction: column;
+
+gap: 20px;
+```
+
+}
+
+.navbar ul {
+gap: 20px;
+}
+
+.services-container {
+grid-template-columns: 1fr;
+max-width: 700px;
+}
+
+.tools-container {
+grid-template-columns: repeat(2, 1fr);
+}
+
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+.navbar {
+padding: 20px;
+}
+
+.navbar ul {
+flex-direction: column;
+
+```
+gap: 12px;
+```
+
+}
+
+.skills-header {
+padding: 65px 20px;
+}
+
+.skills-header h1 {
+font-size: 2.5rem;
+}
+
+.header-description {
+font-size: 15px;
+}
+
+.services-page,
+.tools-section,
+.learning-section {
+padding: 65px 20px;
+}
+
+.section-title h2,
+.learning-content h2 {
+font-size: 2rem;
+}
+
+.service-box {
+padding: 25px;
+}
+
+.service-box h3 {
+font-size: 1.2rem;
+}
+
+.tools-container {
+grid-template-columns: 1fr;
+}
+
+.footer-links {
+flex-direction: column;
+
+```
+gap: 12px;
+```
+
+}
+
+}
